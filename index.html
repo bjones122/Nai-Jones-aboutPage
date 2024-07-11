@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nairobi Jones</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'EB Garamond', serif;
+            background-color: #000033; /* Background color to darker navy */
+            color: #fff; /* Text color = white */
+            border-top: 2px solid #fff; /* Border color to white */
+        }
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            border-bottom: 2px solid #fff; /* Border color to white */
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 2px solid #fff; /* Border color to white */
+            border-radius: 5px 5px 0 0;
+            margin-right: 2px;
+            color: #fff;
+        }
+        .tab:nth-child(1) {
+            background-color: #9a4eae; /* Lavender */
+        }
+        .tab:nth-child(2) {
+            background-color: #6a0dad; /* Purple */
+        }
+        .tab:nth-child(3) {
+            background-color: #4b0082; /* Indigo */
+        }
+        .tab:nth-child(4) {
+            background-color: #191970; /* Blue */
+        }
+        .tab:hover {
+            opacity: 0.7;
+        }
+        .tab-content {
+            display: none;
+            border: 2px solid #fff; /* Border color to white */
+            border-top: none;
+            width: 800px;
+            height: 1000px;
+            overflow: auto;
+            background-color: #fff; /* Content box background to white */
+            color: #000; /* Changed content text color to black */
+            padding: 20px;
+            margin: 20px 0; /* Added margin for spacing */
+            font-family: 'EB Garamond', serif; /* EB Garamond to content-box */
+        }
+        .tab-content.active {
+            display: block;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            padding: 20px;
+        }
+        a {
+            color: #000; /* Changed link color to black */
+            text-decoration: underline;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin: 0;
+            padding-left: 40px; /* Indent bullet points */
+        }
+        h2, h3, h4 {
+            margin-bottom: 0;
+        }
+        h3, h4 {
+            margin-top: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #4b0082; /* Decreased border thickness for contact me text box */
+            color: #000; /* Text color in the text box */
+        }
+        .about-me-box {
+            border: 4px solid #4b0082; /* Increased border thickness for about me section */
+        }
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: #6a0dad;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px #999;
+            transition: all 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #5a00a3;
+        }
+        input[type="submit"]:active {
+            box-shadow: 0 2px #666;
+            transform: translateY(2px);
+        }
+        .profile-pic {
+            display: block;
+            margin-top: 10px;
+            max-width: 100px; /* Set a maximum width for the profile picture */
+            border: 2px solid #6a0dad; /* Changed photo border to purple */
+            border-radius: 5px; /* Made photo rectangle or square */
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Nairobi Jones</h2>
+    <p><a href="mailto:naijones@michigan.edu" style="color: #fff; text-decoration: underline;">naijones@michigan.edu</a> | 347-963-8418</p>
+    <img src="Profile_pic.jpg" alt="Profile Picture" class="profile-pic"> <!-- Profile picture outside text box -->
+    <div class="tab-container">
+        <div class="tab active" onclick="showTab('about')">About Me</div>
+        <div class="tab" onclick="showTab('Research Paper')">Research Paper</div>
+        <div class="tab" onclick="showTab('resume')">Resume</div>
+        <div class="tab" onclick="showTab('linkedin')">LinkedIn</div>
+    </div>
+    <div id="about" class="tab-content active about-me-box">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>Contact: Alternate email address: <a href="mailto:nai.jones1291@gmail.com"> nai.jones1291@gmail.com</a> </p> <!-- Removed tab space before contact text -->
+            <h3>Organizations</h3>
+            <ul>
+                <li>University of Michigan '27</li>
+                <li><a href="https://www.prepforprep.org/about/outcomes" target="_blank">Prep for Prep 9 XXXI</a></li>
+                <li>Girls Who Code 2020</li>
+            </ul>
+            <h3>Interests</h3>
+            <ol class="interests">
+                <li>Research/Healthcare - Michigan Health Scholar: The next tab, "Research Paper," is a comprehensive research paper about _, a _ in which I most recently analyzed for my current program at Michigan.</li>
+                <li>Personal Development: I am constantly on the hunt to develop. One of my favorite subjects - biology - always provides new tricks to enhance my skill set. In my free time, I enjoy playing around with Pycharm using coding languages like C++ and HTML to create mini websites like these!</li>
+                <li>Strategy and Product Innovation: I am highly interested in researching anything, especially products. As it ties to psychology, the idea of learning different strategies for growth (aka marketing/sales) is an activity I am highly keen to learn.</li>
+                <li>Various research memos (as illustrated by the next tab): As my primary research is based on coursework, my personal projects are shorter, more concise pieces of research. Currently, I am researching the effects of drowning on human development.</li>
+            </ol>
+            <h4>Currently...</h4>
+            <ul>
+                <li>Reading: Slaughterhouse 5 (Vonnegut)</li>
+                <li>Learning new biology facts</li>
+                <li>Wanting a cat or another pet</li>
+                <li>Likely searching for a sushi restaurant or at a park</li>
+            </ul>
+            <h4>Contact Me</h4>
+            <p>Contact me about anything! I will gladly feedback for the website.</p> <!-- Added text before name field -->
+            <form action="mailto:naij@michigan.edu" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message (optional):</label>
+                <textarea id="message" name="message" rows="4"></textarea> <!-- Message optional -->
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+    <div id="Research Paper" class="tab-content">
+        <iframe src="https://drive.google.com/file/d/15yjgEwrw3H-MYnsomRRH9t6HRtZkgJis/preview"></iframe>
+    </div>
+    <div id="resume" class="tab-content">
+        <iframe src="https://drive.google.com/file/d/1K4LNKOfqzdnVSOXS3Q633fI7MdmoDkmV/preview"></iframe>
+    </div>
+    <div id="linkedin" class="tab-content">
+        <div class="content">
+            <h2>Connect with Me!</h2>
+            <p>
+                <a href="https://www.linkedin.com/in/nairobi-jones-b90045269/" target="_blank">Visit my LinkedIn Profile</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+
+            // Add active class to the clicked tab
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
 
